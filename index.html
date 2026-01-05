@@ -30,142 +30,102 @@
     described below.
 
     <h3>1. Information We Collect</h3>
-    <div style="margin-left: 20px;">
-      We collect only the information required to enable civic issue reporting and tracking:
-      <ul>
-        <li><b>Name & Email:</b> Used for account creation, authentication, and complaint association.</li>
-        <li><b>Phone Number (Optional):</b> Collected only if you choose to provide it.</li>
-        <li><b>City / Locality:</b> Helps route complaints to the appropriate civic authority.</li>
-      </ul>
-    </div>
+    <ul>
+      <li><b>Name & Email:</b> Used for authentication and account identification.</li>
+      <li><b>Phone Number (Optional):</b> Provided only if the user chooses.</li>
+      <li><b>City / Locality:</b> Used to route civic complaints.</li>
+    </ul>
 
     <h3>2. Complaint Information</h3>
-    <div style="margin-left: 20px;">
-      When you report a civic issue, the following information may be collected:
-      <ul>
-        <li>Issue category and description</li>
-        <li>Photos uploaded or captured as evidence</li>
-        <li>Location of the reported issue (issue location, not your home address)</li>
-        <li>Date and time of submission</li>
-      </ul>
-    </div>
+    <ul>
+      <li>Issue category and description</li>
+      <li>Issue location (location of the civic issue, not the user’s address)</li>
+      <li>Date and time of submission</li>
+    </ul>
 
-    <h3>3. Voice Input (Optional)</h3>
-    <div style="margin-left: 20px;">
-      CitiFix offers an optional speech-to-text feature to make complaint reporting faster.
-      <br><br>
-      <b>Important:</b> Voice input is used only to convert speech into text.
-      Audio is not recorded, stored, or shared.
-    </div>
+    <h3>3. Uploaded Images</h3>
+    <p>
+      When users choose to upload or capture photos while reporting a civic issue,
+      these images are stored securely in <b>Firebase Cloud Storage</b>.
+      Images are used solely as evidence to support issue reporting and resolution
+      and are not used for advertising or marketing.
+    </p>
 
-    <h3>4. How We Use Your Data</h3>
-    <div style="margin-left: 20px;">
-      The collected data is used solely to:
-      <ul>
-        <li>Enable citizens to report civic issues</li>
-        <li>Attach accurate location details to reported issues</li>
-        <li>Route complaints to relevant civic authorities</li>
-        <li>Display complaint status and authority responses</li>
-        <li>Allow escalation or validation of unresolved issues</li>
-        <li>Generate anonymized analytics and insights</li>
-      </ul>
-      CitiFix does <b>not</b> use personal data for advertising or marketing.
-    </div>
+    <h3>4. Voice Input (Optional)</h3>
+    <p>
+      CitiFix offers an optional speech-to-text feature to simplify complaint reporting.
+      Voice input is used only to convert speech into text and is not recorded or stored.
+    </p>
 
-    <h3>5. Use of Device Features</h3>
-    <div style="margin-left: 20px;">
-      CitiFix may access certain device features strictly for app functionality:
-      <ul>
-        <li><b>Internet:</b> To communicate with servers, Firebase services, and fetch updates.</li>
-        <li><b>Location:</b> To tag reported civic issues with accurate issue locations.</li>
-        <li><b>Photos & Storage:</b> To allow users to upload or capture images as complaint evidence.</li>
-        <li><b>Microphone:</b> Only if the user chooses to use voice-to-text while reporting an issue.</li>
-      </ul>
-      All access is user-initiated, purpose-limited, and never continuous.
-    </div>
+    <h3>5. How We Use Your Data</h3>
+    <ul>
+      <li>Enable civic issue reporting</li>
+      <li>Attach accurate issue location</li>
+      <li>Route complaints to authorities</li>
+      <li>Display status updates and responses</li>
+      <li>Generate anonymized analytics</li>
+    </ul>
 
-    <h3>6. Email-Based Complaint Routing</h3>
-    <div style="margin-left: 20px;">
-      CitiFix uses an email-based system to forward civic complaints to the appropriate authorities.
-      <br><br>
-      When a complaint is submitted:
-      <ul>
-        <li>The app requests permission <b>only to send emails</b> from the user’s email account.</li>
-        <li>A secure access token is transmitted to the CitiFix server.</li>
-        <li>The server sends the complaint email on the user’s behalf.</li>
-        <li>CitiFix’s official email account is included in CC for tracking purposes.</li>
-      </ul>
-      CitiFix <b>does not read or access the user’s email inbox</b>.
-      <br><br>
-      Authority responses are retrieved only from CitiFix’s own email account and displayed
-      inside the app to maintain transparency and complaint tracking.
-    </div>
+    <h3>6. Use of Device Features</h3>
+    <ul>
+      <li><b>Internet:</b> Required for Firebase and server communication.</li>
+      <li><b>Location:</b> Used to tag reported civic issues.</li>
+      <li><b>Photos & Storage:</b> Used to upload or capture issue evidence.</li>
+      <li><b>Microphone:</b> Used only when voice-to-text is enabled by the user.</li>
+    </ul>
 
-    <h3>7. Data Storage & Security</h3>
-    <div style="margin-left: 20px;">
-      We use <b>Firebase Authentication</b> for secure login and identity management.
-      <br><br>
-      <b>Firebase Firestore</b> stores:
-      <ul>
-        <li>User profile information</li>
-        <li>Complaint details and status updates</li>
-      </ul>
-      Uploaded images are securely stored in <b>Firebase Cloud Storage</b>.
-    </div>
+    <h3>7. Email-Based Complaint Routing</h3>
+    <p>
+      CitiFix sends complaint emails to authorities on behalf of users using send-only
+      email permission. CitiFix does not read or access the user’s email inbox.
+      Authority replies are retrieved only from CitiFix’s official email account.
+    </p>
 
-    <h3>8. Data Sharing</h3>
-    <div style="margin-left: 20px;">
-      CitiFix does <b>not</b> sell, rent, or trade personal data.
-      <br><br>
-      Complaint details are shared only with relevant civic authorities for the purpose
-      of issue resolution.
-    </div>
+    <h3>8. Data Storage & Security</h3>
+    <ul>
+      <li>Authentication via Firebase Authentication</li>
+      <li>User and complaint data stored in Firebase Firestore</li>
+      <li>Images stored securely in Firebase Cloud Storage</li>
+    </ul>
 
-    <h3>9. Public Visibility of Complaints</h3>
-    <div style="margin-left: 20px;">
-      Reported civic issues may appear in a public feed within the app to improve visibility
-      and enable community engagement such as upvotes.
-      <br><br>
-      Personal contact details and user identities are never displayed publicly.
-    </div>
+    <h3>9. Data Sharing</h3>
+    <p>
+      CitiFix does not sell, rent, or trade personal data.
+      Complaint details are shared only with relevant civic authorities
+      for issue resolution.
+    </p>
 
-    <h3>10. Data Retention After Account Deletion</h3>
-    <div style="margin-left: 20px;">
-      When a user requests account deletion:
-      <ul>
-        <li>All personally identifiable information (name, email, phone number, and user ID) is permanently deleted.</li>
-        <li>The user account is removed from Firebase Authentication.</li>
-        <li>Civic issues reported by the user may be retained in an anonymized form for transparency,
-            analytics, and public accountability.</li>
-        <li>All personal identifiers are removed, and retained issue data is no longer linked to a user.</li>
-        <li>Location data retained represents only the location of the reported issue, not the user.</li>
-      </ul>
-    </div>
+    <h3>10. Public Visibility of Complaints</h3>
+    <p>
+      Reported civic issues may appear in a public feed within the app to improve
+      visibility and community engagement. Personal identifiers are never shown publicly.
+    </p>
 
-    <h3>11. Children’s Privacy</h3>
-    <div style="margin-left: 20px;">
+    <h3>11. Data Retention After Account Deletion</h3>
+    <ul>
+      <li>All personal identifiers (name, email, phone number, user ID) are permanently deleted.</li>
+      <li>Civic issues may be retained in an anonymized form for transparency and analytics.</li>
+      <li>Issue location represents only the location of the issue, not the user.</li>
+      <li>Uploaded images may be retained only with anonymized issues.</li>
+    </ul>
+
+    <h3>12. Children’s Privacy</h3>
+    <p>
       CitiFix is intended for users aged 13 and above.
-      We do not knowingly collect personal data from children under 13.
-      If such data is identified, it will be deleted promptly.
-    </div>
-
-    <h3>12. Your Rights</h3>
-    <div style="margin-left: 20px;">
-      You may request access to, correction of, or deletion of your personal data at any time.
-      Permissions may also be revoked through device settings.
-    </div>
+      We do not knowingly collect data from children under 13.
+    </p>
 
     <h3>13. Changes to This Policy</h3>
-    <div style="margin-left: 20px;">
+    <p>
       This Privacy Policy may be updated periodically.
       Any changes will be reflected on this page with an updated effective date.
-    </div>
+    </p>
 
     <h3>14. Contact Us</h3>
-    <div style="margin-left: 20px;">
-      For questions, concerns, or data deletion requests, contact us at:<br><br>
-      <b>Email: <span style="color: rgb(7, 168, 243);">citifix2025@gmail.com</span></b>
-    </div>
+    <p>
+      <b>Email:</b>
+      <span style="color: rgb(7, 168, 243);">citifix2025@gmail.com</span>
+    </p>
 
   </div>
 </body>
